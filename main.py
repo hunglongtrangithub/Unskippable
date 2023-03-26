@@ -130,7 +130,7 @@ def display_counter(exercise,frame):
 
 
 
-def generate_frames():
+def generate_frames(excersise):
     global stage, pushup_count
     exercise_dict = {
         "curl": [mp_pose.PoseLandmark.LEFT_SHOULDER.value, mp_pose.PoseLandmark.LEFT_ELBOW.value,
@@ -198,7 +198,7 @@ def generate_frames():
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(generate_frames('curl'), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/')
 def homepage() :
