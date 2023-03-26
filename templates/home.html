@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unskippable</title>
+    <style>
+        html,
+        body,
+        div,
+        span {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+            position: relative;
+        }
+        .container {
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            /*justify-content: center;*/
+            align-items: center;
+        }
+        #home-title {
+            border: 1px solid red;
+        }
+        #home-slogan {
+            border: 1px solid blue;
+        }
+        button {
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p id="home-title">Unskippable</p>
+        <p id="home-slogan">Never skip your exercise again</p>
+        <form action="{{ url_for('level_page') }}">
+            <button id="home-practice-btn" type="submit">Begin Practice</button>
+        </form>
+    </div>
+
+</body>
+</html>
